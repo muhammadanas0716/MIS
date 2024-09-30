@@ -1,0 +1,273 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Playfair Display", serif; */
+  font-family: "Robinson", sans-serif;
+  font-weight: bold;
+}
+
+/* Body and general settings */
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Utility container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Smooth transitions */
+a,
+h1,
+p,
+img {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Top Section Navbar */
+.top-nav {
+  background-color: #046dd6;
+  color: #fff;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.top-nav .top-nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.top-nav a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+/* Top Header */
+.top-header {
+  background-color: #002855;
+  padding: 10px 0;
+  font-size: 0.9em;
+  color: #fff;
+  font-weight: 400;
+}
+
+.top-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-header .right-links a {
+  margin-left: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.top-header .right-links a:hover {
+  color: #ffcc00;
+}
+
+/* Main Header */
+.main-header {
+  background-color: #fff;
+  padding: 40px 0;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.school-logo {
+  width: 300px;
+  margin-right: 20px;
+}
+
+.school-title h1 {
+  font-size: 2em;
+  color: #333;
+  margin-left: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.school-title h1 span {
+  color: #046dd6;
+  display: inline-block;
+  position: relative;
+}
+
+.school-title h1 span::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #046dd6;
+  transition: width 0.3s ease-in-out;
+}
+
+.school-title h1:hover span::after {
+  width: 100%;
+}
+
+.school-title p {
+  font-size: 1.1em;
+  color: #555;
+  margin-left: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid #046dd6;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1em;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.nav-menu a:hover {
+  color: #046dd6;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #046dd6;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-menu a:hover::before {
+  width: 100%;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  top: 100%;
+  left: 0;
+  padding: 0;
+  z-index: 10;
+  min-width: 200px;
+  list-style: none;
+}
+
+.dropdown-content li {
+  padding: 15px 20px;
+}
+
+.dropdown-content li a {
+  font-size: 1em;
+  font-weight: 500;
+  color: #333;
+  display: block;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown-content li a:hover {
+  color: #fff;
+  background-color: #046dd6;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Consistent button/link styles */
+button,
+a.button {
+  background-color: #046dd6;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+button:hover,
+a.button:hover {
+  background-color: #034c8c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-content,
+  .top-header .container,
+  .top-nav .top-nav-content,
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    gap: 20px;
+  }
+
+  .school-title h1 {
+    font-size: 1.8em;
+  }
+
+  .school-logo {
+    width: 250px;
+    margin: 0;
+  }
+
+  .top-nav a,
+  .top-header .right-links a {
+    font-size: 0.9em;
+  }
+}
